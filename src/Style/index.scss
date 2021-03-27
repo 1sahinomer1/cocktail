@@ -1,0 +1,635 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
+
+/*Variables*/
+$primaryColor: #01080b;
+$secondColor: #b8c0c5;
+$tagcolor: #d8cec2;
+$xxxxl: 1024px;
+$xxxl: 768px;
+$xxl: 540px;
+$xl: 450px;
+$l: 400px;
+$m: 350px;
+$s: 280px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #06273a;
+}
+
+/*Home Page */
+.videoBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+/*HomeNav Bar */
+.homeNav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  .leftNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    button {
+      font-weight: 400;
+      font-size: 2em;
+      font-family: "Syne Mono", monospace;
+      background-color: $primaryColor;
+      letter-spacing: 0.15em;
+      user-select: none;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      color: $secondColor;
+      @media screen and (max-width: $xl) {
+        font-size: 1em;
+      }
+      @media screen and (max-width: $l) {
+        font-size: 1em;
+      }
+      @media screen and (max-width: $s) {
+        font-size: 0.75em;
+      }
+      span {
+        writing-mode: vertical-rl;
+        transform: scale(-1, -1);
+        letter-spacing: 2px;
+      }
+    }
+  }
+  .rightNav {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .buttons {
+      padding: 1em;
+      button {
+        font-weight: 400;
+        font-size: 1.5em;
+        letter-spacing: 0.15em;
+        user-select: none;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        color: $secondColor;
+        background-color: $primaryColor;
+
+        @media screen and (max-width: $l) {
+          font-size: 1em;
+          font-weight: 300;
+        }
+        @media screen and (max-width: $xl) {
+          font-size: 1em;
+        }
+        @media screen and (max-width: $xxl) {
+          font-size: 1em;
+        }
+        @media screen and (max-width: $xxl) {
+          font-size: 1em;
+        }
+
+        @media screen and (max-width: $m) {
+          font-size: 0.75em;
+        }
+        @media screen and (max-width: $s) {
+          font-size: 0.6em;
+        }
+        &:hover {
+          color: $primaryColor;
+          background-color: $secondColor;
+        }
+      }
+    }
+  }
+}
+
+/*Search Page */
+.App {
+  font-family: "Ubuntu", sans-serif;
+  height: 100%;
+  width: 100%;
+  @media screen and (max-width: $l) {
+    overflow: hidden;
+  }
+  /*Nav Bar */
+  .nav {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(#000 0, #031621 64.2%, #06273a 100%);
+    padding: 0.5em;
+    .leftNav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media screen and (max-width: $xl) {
+        font-size: 1em;
+      }
+      @media screen and (max-width: $l) {
+        font-size: 1em;
+      }
+
+      @media screen and (max-width: $s) {
+        font-size: 0.75em;
+      }
+      button {
+        font-weight: 400;
+        font-size: 2em;
+        font-family: "Syne Mono", monospace;
+        background-color: $primaryColor;
+        letter-spacing: 0.15em;
+        user-select: none;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        color: $secondColor;
+
+        span {
+          writing-mode: vertical-rl;
+          transform: scale(-1, -1);
+          letter-spacing: 2px;
+        }
+      }
+    }
+    .rightNav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .buttons {
+        padding: 1em;
+        button {
+          font-weight: 400;
+          font-size: 1.5em;
+          letter-spacing: 0.15em;
+          user-select: none;
+          cursor: pointer;
+          border: none;
+          outline: none;
+          color: $secondColor;
+          background-color: $primaryColor;
+          @media screen and (max-width: $xxl) {
+            font-size: 1em;
+          }
+          @media screen and (max-width: $xl) {
+            font-size: 1em;
+          }
+          @media screen and (max-width: $l) {
+            font-size: 1em;
+            font-weight: 300;
+          }
+          @media screen and (max-width: $m) {
+            font-size: 0.75em;
+          }
+          @media screen and (max-width: $s) {
+            font-size: 0.6em;
+          }
+          &:hover {
+            color: $primaryColor;
+            background-color: $secondColor;
+          }
+        }
+      }
+    }
+  }
+
+  /* search page*/
+  .search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .input {
+      text-align: center;
+      p {
+        font-size: 4em;
+        font-family: "Times New Roman", Times, serif;
+        color: $secondColor;
+        @media screen and (max-width: $l) {
+          font-size: 2em;
+        }
+        @media screen and (max-width: $xl) {
+          font-size: 3em;
+        }
+        @media screen and (max-width: $m) {
+          font-size: 2em;
+        }
+        @media screen and (max-width: $xxl) {
+          font-size: 2em;
+        }
+        @media screen and (max-width: $s) {
+          font-size: 2em;
+        }
+      }
+
+      input {
+        margin-top: 2em;
+        width: 25em;
+        height: 2.5em;
+        text-align: center;
+        border-radius: 2em;
+        background-color: #06273a;
+        border: 1px solid #b8c0c5;
+        color: $secondColor;
+
+        @media screen and (max-width: $xxxl) {
+          width: 30em;
+          height: 3em;
+        }
+        @media screen and (max-width: $xxxxl) {
+          width: 35em;
+          height: 3.5em;
+        }
+        @media screen and (max-width: $s) {
+          width: 15em;
+        }
+        @media screen and (max-width: $l) {
+          width: 20em;
+        }
+        @media screen and (max-width: $xl) {
+          width: 20em;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .results {
+      .searchCocktail {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 2em;
+        .searchCard {
+          width: 20em;
+          margin: 1em;
+          border: 1em solid #06273a;
+          background-color: #031621;
+          text-align: center;
+
+          @media screen and (max-width: $xxxxl) {
+            width: 19em;
+            margin: 0.5em;
+          }
+          @media screen and (max-width: $xxxl) {
+            width: 19em;
+            margin: 1.5em;
+          }
+
+          @media screen and (max-width: $xxl) {
+            width: 13em;
+            margin: 0.7em;
+          }
+          @media screen and (max-width: $xl) {
+            width: 9em;
+            margin: 0.5em;
+          }
+          @media screen and (max-width: $l) {
+            width: 8em;
+            margin: 0.5em;
+            border: 0.75em;
+          }
+          @media screen and (max-width: $m) {
+            width: 7em;
+            margin: 0.5em;
+            border: 0.5em;
+          }
+          @media screen and (max-width: $s) {
+            width: 5em;
+            margin-left: 0.3em;
+            border: 0.5em;
+          }
+
+          .img {
+            overflow: hidden;
+            img {
+              width: 100%;
+              transition: all 0.5s ease;
+              &:hover {
+                transform: scale(1.1);
+              }
+            }
+          }
+          .link {
+            text-decoration: none;
+            color: blueviolet;
+            font-size: 1em;
+            @media screen and (max-width: $xxxxl) {
+              font-size: 2em;
+            }
+            @media screen and (max-width: $xxxl) {
+              font-size: 1.9em;
+            }
+            @media screen and (max-width: $xxl) {
+              font-size: 1.3em;
+            }
+            @media screen and (max-width: $xl) {
+              font-size: 1.1em;
+            }
+            @media screen and (max-width: $l) {
+              font-size: 1em;
+            }
+            @media screen and (max-width: $m) {
+              font-size: 0.9em;
+            }
+            @media screen and (max-width: $s) {
+              font-size: 0.8em;
+            }
+            &:hover {
+              color: $secondColor;
+            }
+          }
+          .cocktailName {
+            color: $secondColor;
+            text-align: center;
+            font-size: 2em;
+            @media screen and (max-width: $xxxxl) {
+              font-size: 3em;
+            }
+            @media screen and (max-width: $xxxl) {
+              font-size: 2.5em;
+            }
+            @media screen and (max-width: $xxl) {
+              font-size: 2em;
+            }
+            @media screen and (max-width: $xl) {
+              font-size: 1.4em;
+            }
+            @media screen and (max-width: $l) {
+              font-size: 1.3em;
+            }
+            @media screen and (max-width: $m) {
+              font-size: 1.1em;
+            }
+            @media screen and (max-width: $s) {
+              font-size: 1em;
+            }
+          }
+          .cocktailCategory {
+            color: #d0e269;
+            background-color: #01080b;
+            text-align: center;
+            font-size: 1.1em;
+            @media screen and (max-width: $xxxxl) {
+              font-size: 1.8em;
+            }
+            @media screen and (max-width: $xxxl) {
+              font-size: 1.7em;
+            }
+            @media screen and (max-width: $xxl) {
+              font-size: 1.3em;
+            }
+            @media screen and (max-width: $xl) {
+              font-size: 1em;
+            }
+            @media screen and (max-width: $l) {
+              font-size: 1em;
+            }
+            @media screen and (max-width: $m) {
+              font-size: 0.9em;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Random Page */
+.randomPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media screen and (max-width: $xxxxl),
+    (max-width: $xxxl),
+    (max-width: $xxl),
+    (max-width: $l),
+    (max-width: $m),
+    (max-width: $s) {
+    display: flex;
+    flex-direction: column;
+  }
+  .leftRand {
+    margin: 1em;
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        color: $secondColor;
+        font-size: 1em;
+        margin-top: 1em;
+      }
+      img {
+        width: 30em;
+        @media screen and (max-width: $xxxl) {
+          width: 35em;
+        }
+        @media screen and (max-width: $xxl) {
+          width: 12em;
+        }
+        @media screen and (max-width: $xl) {
+          width: 9em;
+        }
+        @media screen and (max-width: $l) {
+          width: 8em;
+        }
+        @media screen and (max-width: $m) {
+          width: 7em;
+        }
+      }
+      .tags {
+        border-radius: 3px;
+        display: flex;
+        justify-content: -between;
+        align-items: center;
+        padding: 6px;
+        @media screen and (max-width: $l) {
+          padding: 1px;
+        }
+        .tag {
+          height: 3em;
+          margin: 0.5em;
+          padding: 0.5em;
+          border-radius: 0.5em;
+          background: $tagcolor;
+          display: flex;
+          align-items: center;
+          color: $primaryColor;
+          cursor: default;
+        }
+      }
+    }
+  }
+  .rightRand {
+    width: 65em;
+    @media screen and (max-width: $xxxxl) {
+      width: 35em;
+    }
+    @media screen and (max-width: $xxxl) {
+      width: 35em;
+    }
+    @media screen and (max-width: $xxl) {
+      width: 25em;
+    }
+    @media screen and (max-width: $xl) {
+      width: 15em;
+      h2 {
+        text-align: center;
+      }
+    }
+    @media screen and (max-width: $l) {
+      width: 15em;
+      h2 {
+        text-align: center;
+      }
+    }
+
+    .ingTitle {
+      color: $secondColor;
+    }
+    .howText {
+      color: $secondColor;
+      margin-top: 4em;
+      margin-left: 1em;
+      @media screen and (max-width: $xxxxl) {
+        margin-top: 1em;
+        font-size: 4em;
+      }
+      @media screen and (max-width: $xxxl) {
+        margin-top: 1em;
+        font-size: 4em;
+      }
+      @media screen and (max-width: $xxl),
+        (max-width: $xl),
+        (max-width: $l),
+        (max-width: $m),
+        (max-width: $s) {
+        margin-top: 2em;
+        margin-left: 0;
+        font-size: 2em;
+      }
+    }
+
+    .randText {
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+      color: $secondColor;
+      margin: 2em;
+      @media screen and (max-width: $xxxxl) {
+        font-size: 2.5em;
+      }
+      @media screen and (max-width: $xxxl) {
+        font-size: 2em;
+      }
+      @media screen and (max-width: $xxl),
+        (max-width: $xl),
+        (max-width: $l),
+        (max-width: $m),
+        (max-width: $s) {
+        text-align: center;
+        font-size: 1em;
+      }
+    }
+    .ingredients {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      .ingredient {
+        margin: 1em;
+        color: $secondColor;
+        text-align: center;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        @media screen and (max-width: $xxxxl) {
+          p {
+            font-size: 1.5em;
+          }
+        }
+        @media screen and (max-width: $xxxl),
+          (max-width: $xxl),
+          (max-width: $xl),
+          (max-width: $l),
+          (max-width: $m) {
+          margin: 0.6em;
+          font-size: 0.7em;
+        }
+
+        img {
+          width: 5em;
+          @media screen and (max-width: $xl) {
+            width: 2.8em;
+          }
+          @media screen and (max-width: $l) {
+            width: 2.5em;
+          }
+        }
+      }
+    }
+    .giveButton {
+      text-align: center;
+      margin: 1em;
+      button {
+        font-weight: 400;
+        font-size: 1em;
+        user-select: none;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        border-radius: 1em;
+        width: 5em;
+        height: 3em;
+        background-color: $secondColor;
+      }
+    }
+  }
+}
+/*About Page */
+.about {
+  color: $secondColor;
+  .whoami {
+    text-align: center;
+    h3 {
+      color: #d8cec2;
+      margin: 2em;
+    }
+    @media screen and (max-width: $xxxxl), (max-width: $xxl) {
+      p {
+        font-size: 2em;
+      }
+    }
+    @media screen and (max-width: $xl), (max-width: $l), (max-width: $m) {
+      p {
+        font-size: 1em;
+      }
+    }
+  }
+
+  .contactMe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    padding: 1em;
+  }
+}
+/* Footer */
+.footer {
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: $primaryColor;
+  }
+}
